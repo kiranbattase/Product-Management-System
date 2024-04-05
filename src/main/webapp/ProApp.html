@@ -1,0 +1,147 @@
+<html>
+<head>
+
+<title>Product ProjectApp</title>
+<!--BootStrap CDN link to Get the Support of BootStrap-->
+
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!--This is java script validation code location-->
+<script type="text/javascript" src="proJScript.js"></script>
+
+<style>
+			body{
+					background-color: rgb(128, 128, 255);
+					text-align: center;	
+				}
+			 h2 {
+            		text-align:center;
+            		margin-top: 50px;
+        		}
+        form {
+            width: 30%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+         input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+         input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+		</style>
+
+</head>
+
+<body>
+	
+	
+<div class ="container mt-5 text-center">
+	
+	<h2 class = "text-center font-italic mb-1">Save Product Data...</h2>
+	
+	<div class="container mt-5 text-center">
+			<form action="./AddProductServlet" method="post"
+			enctype="multipart/form-data" onsubmit="return validateform()">
+			
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="proId">Product ID:</label>
+				<input type = "text"class = "form-control-sm" id="ProID"
+				name="proId" required>
+			</div>
+				
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="proId">Product Name:</label>
+				<input type = "text"class = "form-control-sm" id="ProName"
+				name="Proname" required>
+			</div>
+				
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="proId">Product Price:</label>
+				<input type = "text"class = "form-control-sm" id="ProPrice"
+				name="ProPrice" required>
+			</div>
+				
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="proId">Product Brand:</label>
+				<input type = "text"class = "form-control-sm" id="Probrand"
+				name="ProBrand" required>
+			</div>
+				
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="proId">Product MadeIN:</label>
+				<input type = "text"class = "form-control-sm" id="ProMadeIN"
+				name="ProMadeIN" required>
+			</div>
+			
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="proId">Product MFD:</label>
+				<input type = "date"class = "form-control-sm" id="ProMfg"
+				name="ProMFDdate" required>
+			</div>
+			
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="proId">Product Exp date:</label>
+				<input type = "date"class = "form-control-sm" id="ProExp"
+				name="ProExpDate" required>
+			</div>
+			
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="image">Product Image:</label>
+				<input type = "file"class = "form-control-sm" id="Proimage"
+				name="ProIMAGE" accept="/*" required>
+			</div>
+			
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="audio">Product Audio:</label>
+				<input type = "file"class = "form-control-sm" id="audio"
+				name="audio" accept="audio/*" required>
+			</div>
+			
+			<div class="form-group">
+				<label class = "font-italic font-weight-bold"
+				for="video">Product Video:</label>
+				<input type = "file"class = "form-control-sm" id="video"
+				name="video" accept="video/*" required>
+			</div>
+			
+			<div class="form-group">
+	                <input type="submit" class="btn btn-success" value="save Product"/>
+	                <br><br>
+	                <a href="ListOfProduct.jsp" class="btn btn-primary">List of Products</a>    
+	        </div>
+	      </form>	
+	</div>
+            
+	
+		
+</body>
+</html>
